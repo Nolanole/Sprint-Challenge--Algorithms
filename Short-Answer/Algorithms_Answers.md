@@ -19,3 +19,6 @@ This should be treated a binary sort problem. If you start at floor one and incr
   - If the first egg did not break, instead update the low floor to the current floor, and go up to the floor that is the midway point between the current floor and the high. 
 
 - Repeat this process until the low and high floor are adjacent floors, (make sure to test both of the last high and low floors) and return the highest floor in which the egg did not break.
+
+
+The runtime complexity of this binary search is O(log(n))
