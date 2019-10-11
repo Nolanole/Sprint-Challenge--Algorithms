@@ -9,4 +9,4 @@ def count_th(word):
     elif len(word) == 2:
       return 1 if word == 'th' else 0
     else:
-      return 1 + count_th(word[:n-1]) if word[-2:] == 'th' else 0 + count_th(word[:n-1])
+      return 1 + count_th(word[:len(word)-1]) if word[-2:] == 'th' else 0 + count_th(word[:len(word)-1])
