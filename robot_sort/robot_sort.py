@@ -114,20 +114,19 @@ class SortingRobot:
 				if self.compare_item() is None:
 					if self.can_move_right():
 						self.swap_item()
-					else:
+					else: #reached the last item
 						self.swap_item()
 						self.set_light_off()
 						break
 				elif self.compare_item() < 0:
 					self.swap_item()
 				else:
-					self.set_light_on()
+					if not self.light_is_on():
+						self.set_light_on()
           	#youve reached the last position:
 			if self.compare_item() == 1:
 				self.swap_item()
-			# elif self.compare_item() is None:
-			# 	continue
-			# else: #self.compare_item <= 0:
+
 			while self.can_move_left():
 				self.move_left()
 				if self.compare_item() is None:
